@@ -1,5 +1,5 @@
 # okex-api-v3
-Python wrapper for okex api v3 Spot
+Python wrapper aimed to simplify usage Okex REST API v3 for Spot
 > Full rest api https://www.okex.com/docs/en/
 
 ### Usage
