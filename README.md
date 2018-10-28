@@ -3,7 +3,8 @@ Python wrapper for okex api v3 Spot
 > Full rest api https://www.okex.com/docs/en/
 
 ### Usage
-```
+Get tickers
+```python
 from okex_api_spot import *
 okex = Okex('<your_api_key>', '<your_secret_key>', '<your_pass_phrase>', '<your_fund_password>')
 
