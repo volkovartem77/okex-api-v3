@@ -43,7 +43,7 @@ class Okex:
         self.__fund_password = fund_password
 
     def __toISO8601(self, time):
-        return time.replace(tzinfo=datetime.timezone.utc).isoformat().split('+')[0] + 'Z'
+        return time.isoformat().split('+')[0] + 'Z'
 
     # signature
     def __signature(self, timestamp, method, request_path, body):
