@@ -43,7 +43,7 @@ class Okex:
         self.__fund_password = fund_password
 
     def __toISO8601(self, time):
-        return time.replace(tzinfo=datetime.timezone.utc).isoformat().split('+')[0] + 'Z'
+        return time.isoformat().split('+')[0] + 'Z'
 
     # signature
     def __signature(self, timestamp, method, request_path, body):
@@ -276,5 +276,5 @@ class Okex:
         if start_time is not None:
             params.update({'start': self.__toISO8601(start_time)})
         if end_time is not None:
-            params.update({'start': self.__toISO8601(end_time)})
+            params.update({'end': self.__toISO8601(end_time)})
         return self.__get('/api/spot/v3/instruments/' + str(symbol.replace('/', '-').replace('_', '-')) + '/candles', params)
