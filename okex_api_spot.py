@@ -276,5 +276,5 @@ class Okex:
         if start_time is not None:
             params.update({'start': self.__toISO8601(start_time)})
         if end_time is not None:
-            params.update({'start': self.__toISO8601(end_time)})
+            params.update({'end': self.__toISO8601(end_time)})
         return self.__get('/api/spot/v3/instruments/' + str(symbol.replace('/', '-').replace('_', '-')) + '/candles', params)
